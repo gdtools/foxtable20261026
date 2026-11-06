@@ -1,0 +1,2879 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{34394AD6-AA48-4D88-9200-18771DD86D59}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Foxtable</RootNamespace>
+    <AssemblyName>Foxtable</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Foxtable.ico</ApplicationIcon>
+    <StartupObject>Foxtable.Main</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Excel.4" />
+    <Reference Include="C1.C1Pdf.4" />
+    <Reference Include="C1.C1Report.4" />
+    <Reference Include="C1.C1Word.4" />
+    <Reference Include="C1.C1Zip.4" />
+    <Reference Include="C1.Win.4" />
+    <Reference Include="C1.Win.C1Chart.4" />
+    <Reference Include="C1.Win.C1Command.4" />
+    <Reference Include="C1.Win.C1Document.4" />
+    <Reference Include="C1.Win.C1FlexGrid.4" />
+    <Reference Include="C1.Win.C1FlexGrid.ImportExport.4" />
+    <Reference Include="C1.Win.C1GanttView.4" />
+    <Reference Include="C1.Win.C1Gauge.4" />
+    <Reference Include="C1.Win.C1Gauge.4.Design" />
+    <Reference Include="C1.Win.C1Input.4" />
+    <Reference Include="C1.Win.C1Report.4" />
+    <Reference Include="C1.Win.C1Ribbon.4" />
+    <Reference Include="C1.Win.C1Schedule.4" />
+    <Reference Include="C1.Win.C1Sizer.4" />
+    <Reference Include="C1.Win.C1Themes.4" />
+    <Reference Include="C1.Win.FlexViewer.4" />
+    <Reference Include="C1.Win.Input.MultiSelect.4" />
+    <Reference Include="C1.Win.Map.4" />
+    <Reference Include="C1.Win.Sparkline.4" />
+    <Reference Include="ChnCharInfo" />
+    <Reference Include="DPFPDevNET" />
+    <Reference Include="DPFPEngNET" />
+    <Reference Include="DPFPShrNET" />
+    <Reference Include="DPFPVerNET" />
+    <Reference Include="Foxtable.Lib" />
+    <Reference Include="Interop.ADODB" />
+    <Reference Include="Interop.ADOX" />
+    <Reference Include="Interop.JinDI_SmsComLib" />
+    <Reference Include="Interop.JRO" />
+    <Reference Include="Interop.MSDASC" />
+    <Reference Include="Interop.MSScriptControl" />
+    <Reference Include="Microsoft.Office.Interop.Excel" />
+    <Reference Include="Microsoft.Office.Interop.Word" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.WebView2.Core" />
+    <Reference Include="Microsoft.Web.WebView2.WinForms" />
+    <Reference Include="Neodynamic.WinControls.BarcodeProfessional" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Office2007Renderer" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TSF" />
+    <Reference Include="WXBizMsgCrypt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADOXBuilder.vb" />
+    <Compile Include="ADOXTable.vb" />
+    <Compile Include="ADOXType.vb" />
+    <Compile Include="af.Designer.vb">
+      <DependentUpon>af.vb</DependentUpon>
+    </Compile>
+    <Compile Include="af.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AfterReceiveFileEventArgs.vb" />
+    <Compile Include="AfterSendFileEventArgs.vb" />
+    <Compile Include="AggregateRange.vb" />
+    <Compile Include="AggregateType.vb" />
+    <Compile Include="AIParameter.vb" />
+    <Compile Include="AITool.vb" />
+    <Compile Include="AIToolBuilder.vb" />
+    <Compile Include="AudioJs.vb" />
+    <Compile Include="b.vb" />
+    <Compile Include="BarCodeBuilder.vb" />
+    <Compile Include="BarCodeEnum.vb" />
+    <Compile Include="BarcodeProfessionalProperty.vb" />
+    <Compile Include="BarCodeProperty.vb" />
+    <Compile Include="BarDirectionEnum.vb" />
+    <Compile Include="BeforeAddFileEventArgs.vb" />
+    <Compile Include="BeforeAttachFileEvents.vb" />
+    <Compile Include="BeforeCloseProjectEventArgs.vb" />
+    <Compile Include="BeforeConnectOuterDataSourceEventArgs.vb" />
+    <Compile Include="BeforeDeleteFileEventArgs.vb" />
+    <Compile Include="BeforeGetImageEventArgs.vb" />
+    <Compile Include="BeforeLoadInnerTableEventArgs.vb" />
+    <Compile Include="BeforeLoadOuterTableEventArgs.vb" />
+    <Compile Include="BeforeOpenFileEventArgs.vb" />
+    <Compile Include="BeforeOpenProjectEventArgs.vb" />
+    <Compile Include="BeforeShowContextMenuEventArgs.vb" />
+    <Compile Include="BomTable.vb" />
+    <Compile Include="BuildEventArgs.vb" />
+    <Compile Include="BuildInDropTree.vb" />
+    <Compile Include="ButtonProperty.vb" />
+    <Compile Include="CalendarProperty.vb" />
+    <Compile Include="Camera.vb" />
+    <Compile Include="CancelEventArgs.vb" />
+    <Compile Include="CellChart.vb" />
+    <Compile Include="CellClickEventArgs.vb" />
+    <Compile Include="CellRange.vb" />
+    <Compile Include="CellRangeChangeEventArgs.vb" />
+    <Compile Include="CellStyle.vb" />
+    <Compile Include="CellStyleProperty.vb" />
+    <Compile Include="ChangeEditEventArgs.vb" />
+    <Compile Include="ChartBuilder.vb" />
+    <Compile Include="ChartEventArgs.vb" />
+    <Compile Include="ChartHistogram.vb" />
+    <Compile Include="ChartMouseEventArgs.vb" />
+    <Compile Include="ChartProperty.vb" />
+    <Compile Include="ChartToolTipEventArgs.vb" />
+    <Compile Include="ChartTypeEnum.vb" />
+    <Compile Include="CheckBoxProperty.vb" />
+    <Compile Include="CheckedComboBoxProperty.vb" />
+    <Compile Include="CheckedListBoxProperty.vb" />
+    <Compile Include="ChildrenCollection.vb" />
+    <Compile Include="ChinesFunctions.vb" />
+    <Compile Include="Client_BuddyLoginEventArgs.vb" />
+    <Compile Include="Client_BuddyLogoutEventArgs.vb" />
+    <Compile Include="Client_ChangeUserPasswordEventArgs.vb" />
+    <Compile Include="Client_LogoutEventArgs.vb" />
+    <Compile Include="Client_MessageEventargs.vb" />
+    <Compile Include="Client_UserEventArgs.vb" />
+    <Compile Include="ClipBoardJs.vb" />
+    <Compile Include="Col.vb" />
+    <Compile Include="ColCollection.vb" />
+    <Compile Include="ColorDialogA.vb" />
+    <Compile Include="ColorDialogJs.vb" />
+    <Compile Include="ColorLabelProperty.vb" />
+    <Compile Include="ColorPickerProperty.vb" />
+    <Compile Include="ColumnDataTypeEnum.vb" />
+    <Compile Include="ColumnLayoutSetting.vb" />
+    <Compile Include="ComboboxProperty.vb" />
+    <Compile Include="CompassEnum.vb" />
+    <Compile Include="ConfigFunctions.vb" />
+    <Compile Include="Connection.vb" />
+    <Compile Include="ConnectionCollection.vb" />
+    <Compile Include="ConnectModemResultEventArgs.vb" />
+    <Compile Include="ContentLoadingEventArgs.vb" />
+    <Compile Include="ContextCommand.vb" />
+    <Compile Include="ContextCommandEventArgs.vb" />
+    <Compile Include="ContextCommandMenu.vb" />
+    <Compile Include="ContextCommandMenuEventArgs.vb" />
+    <Compile Include="ContextMenu.vb" />
+    <Compile Include="ContextMenuCollection.vb" />
+    <Compile Include="ContextMenuEventArgs.vb" />
+    <Compile Include="ContextMenuRequestedEventArgs.vb" />
+    <Compile Include="ControlCollection.vb" />
+    <Compile Include="ControlEventArgs.vb" />
+    <Compile Include="ControlHolder.Designer.vb">
+      <DependentUpon>ControlHolder.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ControlKeyEventArgs.vb" />
+    <Compile Include="ControlKeyPressEventArgs.vb" />
+    <Compile Include="ControlMouseEventArgs.vb" />
+    <Compile Include="ControlPropertyBase.vb" />
+    <Compile Include="ControlTypeEnum.vb" />
+    <Compile Include="CrossExpressionGroup.vb" />
+    <Compile Include="CrossExpressionGroupCollections.vb" />
+    <Compile Include="CrossGroupCollection.vb" />
+    <Compile Include="CrossGroupOn.vb" />
+    <Compile Include="CrossTableBuilder.vb" />
+    <Compile Include="CrossTableProperty.vb" />
+    <Compile Include="CrossTotalCollection.vb" />
+    <Compile Include="CrossTotalOn.vb" />
+    <Compile Include="cssClassList.vb" />
+    <Compile Include="CSSStyle.vb" />
+    <Compile Include="CursorEnum.vb" />
+    <Compile Include="CustomCheckBox.vb" />
+    <Compile Include="CustomCheckedListBox.vb" />
+    <Compile Include="CustomColorLabel.vb" />
+    <Compile Include="CustomDockingTabPageProperty.vb" />
+    <Compile Include="CustomListBox.vb" />
+    <Compile Include="CustomMarkShape.vb" />
+    <Compile Include="CustomMenuClickEventArgs.vb" />
+    <Compile Include="CustomNavBarPanelProperty.vb" />
+    <Compile Include="CustomPictureBox.vb" />
+    <Compile Include="CustomTileSource.vb" />
+    <Compile Include="CustomTreeNodeProperty.vb" />
+    <Compile Include="d0.Designer.vb">
+      <DependentUpon>d0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="d0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataCol.vb" />
+    <Compile Include="DataColBuilder.vb" />
+    <Compile Include="DataColCollection.vb" />
+    <Compile Include="DataColEventArgs.vb" />
+    <Compile Include="DataColumnProperty.vb" />
+    <Compile Include="DataMapJs.vb" />
+    <Compile Include="DataReceivedEventArgs.vb" />
+    <Compile Include="DataRelationCollection.vb" />
+    <Compile Include="DataRow.vb" />
+    <Compile Include="DataRowCollection.vb" />
+    <Compile Include="DataRowEventArgs.vb" />
+    <Compile Include="DataServerTypeEnum.vb" />
+    <Compile Include="DataTable.vb" />
+    <Compile Include="DataTableBuilder.vb" />
+    <Compile Include="DataTableCollection.vb" />
+    <Compile Include="DataTableProperty.vb" />
+    <Compile Include="DataToTable.vb" />
+    <Compile Include="DataTypePair.vb" />
+    <Compile Include="DateTimePickerProperty.vb" />
+    <Compile Include="DetailEventArgs.vb" />
+    <Compile Include="di.Designer.vb">
+      <DependentUpon>di.vb</DependentUpon>
+    </Compile>
+    <Compile Include="di.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayTypeEnum.vb" />
+    <Compile Include="DockSetting.vb" />
+    <Compile Include="DOMContentLoadedEventArgs.vb" />
+    <Compile Include="DotfuscatorAttribute.vb" />
+    <Compile Include="DownloadStartingEventArgs.vb" />
+    <Compile Include="DownloadStateChangedEventArgs.vb" />
+    <Compile Include="DragColumnEventArgs.vb" />
+    <Compile Include="DrawCellEventArgs.vb" />
+    <Compile Include="DrawListViewCellEventArgs.vb" />
+    <Compile Include="DrawRowEventArgs.vb" />
+    <Compile Include="DropDownBoxProperty.vb" />
+    <Compile Include="DropDownClosedEventArgs.vb" />
+    <Compile Include="DropListViewRowEventArgs.vb" />
+    <Compile Include="DropTreeBuilder.vb" />
+    <Compile Include="du.Designer.vb">
+      <DependentUpon>du.vb</DependentUpon>
+    </Compile>
+    <Compile Include="du.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DyncMemberAccessor.vb" />
+    <Compile Include="ef.Designer.vb">
+      <DependentUpon>ef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ef.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ev.Designer.vb">
+      <DependentUpon>ev.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ev.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exporter.vb" />
+    <Compile Include="ExpressionGroup.vb" />
+    <Compile Include="ExpressionTotal.vb" />
+    <Compile Include="f4.Designer.vb">
+      <DependentUpon>f4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="f4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileInfo.vb" />
+    <Compile Include="FileManager.Designer.vb">
+      <DependentUpon>FileManager.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FileManagerProperty.vb" />
+    <Compile Include="FileSystemWatcher.vb" />
+    <Compile Include="FileWatchEventArgs.vb" />
+    <Compile Include="Filler.vb" />
+    <Compile Include="FilterEventArgs.vb" />
+    <Compile Include="FilterRowEventArgs.vb" />
+    <Compile Include="FingerCaptureEventArgs.vb" />
+    <Compile Include="FitTypeEnum.vb" />
+    <Compile Include="FolderBrowserDialogA.vb" />
+    <Compile Include="FolderBrowserDialogForjs.vb" />
+    <Compile Include="FontDialgA.vb" />
+    <Compile Include="FontDialogJs.vb" />
+    <Compile Include="FontPickerProperty.vb" />
+    <Compile Include="FormattingEventArgs.vb" />
+    <Compile Include="FormCollection.vb" />
+    <Compile Include="FormEventArgs.vb" />
+    <Compile Include="FormMenuItemProperty.vb" />
+    <Compile Include="FormMenuProperty.vb" />
+    <Compile Include="FormPanel.Designer.vb">
+      <DependentUpon>FormPanel.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FormProperty.vb" />
+    <Compile Include="FormStyleEnum.vb" />
+    <Compile Include="FoxFinger.vb" />
+    <Compile Include="FoxSMSControl.vb" />
+    <Compile Include="FTPBeforeListDetailsEventArgs.vb" />
+    <Compile Include="FTPClient.vb" />
+    <Compile Include="FTPDeleteEventargs.vb" />
+    <Compile Include="FTPDownloadEventArgs.vb" />
+    <Compile Include="FTPFolderEventArgs.vb" />
+    <Compile Include="FTPRenameEventArgs.vb" />
+    <Compile Include="FTPUploadEventArgs.vb" />
+    <Compile Include="fxDataRelationProperty.vb" />
+    <Compile Include="fxDataSource.vb" />
+    <Compile Include="fxDataSource2.vb" />
+    <Compile Include="g1.Designer.vb">
+      <DependentUpon>g1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="g1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="g2.Designer.vb">
+      <DependentUpon>g2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="g2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GannttStripItemClikEventArgs.vb" />
+    <Compile Include="GanttPaintDayEventArgs.vb" />
+    <Compile Include="GanttTaskBarClickEventArgs.vb" />
+    <Compile Include="GanttTaskBarTooltipEventArgs.vb" />
+    <Compile Include="GanttTaskEventArgs.vb" />
+    <Compile Include="GanttTasksEventArgs.vb" />
+    <Compile Include="GanttView.vb" />
+    <Compile Include="GanttViewProperty.vb" />
+    <Compile Include="GaugeFormatLabelEventArgs.vb" />
+    <Compile Include="GaugeItemEventArgs.vb" />
+    <Compile Include="GaugeItemMouseEventArgs.vb" />
+    <Compile Include="GaugePointerDragEventArgs.vb" />
+    <Compile Include="GaugePointerValueChangedEventArgs.vb" />
+    <Compile Include="GaugesProperty.vb" />
+    <Compile Include="GeoMap.vb" />
+    <Compile Include="GetMapTileEventArgs.vb" />
+    <Compile Include="GetVirtualItemsEventArgs.vb" />
+    <Compile Include="gg.Designer.vb">
+      <DependentUpon>gg.vb</DependentUpon>
+    </Compile>
+    <Compile Include="gg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalVariableChangedEventArgs.vb" />
+    <Compile Include="GroupBoxProperty.vb" />
+    <Compile Include="GroupCollection.vb" />
+    <Compile Include="GroupFooterEventArgs.vb" />
+    <Compile Include="GroupHeaderEventArgs.vb" />
+    <Compile Include="GroupOn.vb" />
+    <Compile Include="GroupTableBuilder.vb" />
+    <Compile Include="GroupTableProperty.vb" />
+    <Compile Include="GroupTreeSetting.vb" />
+    <Compile Include="gv.Designer.vb">
+      <DependentUpon>gv.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="h0.Designer.vb">
+      <DependentUpon>h0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="h0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HElement.vb" />
+    <Compile Include="HistogramTypeEnum.vb" />
+    <Compile Include="HStorage.vb" />
+    <Compile Include="HttpClient.vb" />
+    <Compile Include="HttpDictionary.vb" />
+    <Compile Include="HttpFilleCollection.vb" />
+    <Compile Include="HttpFunctions.vb" />
+    <Compile Include="HttpListenter.vb" />
+    <Compile Include="ImageMap.vb" />
+    <Compile Include="ImageSizeMode.vb" />
+    <Compile Include="IMBuddy.vb" />
+    <Compile Include="IMBuddyCollections.vb" />
+    <Compile Include="IMClient.vb" />
+    <Compile Include="IMClientCollections.vb" />
+    <Compile Include="IMFontProperty.vb" />
+    <Compile Include="Importer.vb" />
+    <Compile Include="IMServer.vb" />
+    <Compile Include="IMServerCollections.vb" />
+    <Compile Include="IMUser.vb" />
+    <Compile Include="IMUserCollections.vb" />
+    <Compile Include="InitializationCompletedEventArgs.vb" />
+    <Compile Include="InlineGroupTableBuilder.vb" />
+    <Compile Include="InlineMRPBuilder.vb" />
+    <Compile Include="InlineTreeSetting.vb" />
+    <Compile Include="ItemCheckEventArgs.vb" />
+    <Compile Include="j8.Designer.vb">
+      <DependentUpon>j8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="j8.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="jk.Designer.vb">
+      <DependentUpon>jk.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="JoinTableProperty.vb" />
+    <Compile Include="jr.Designer.vb">
+      <DependentUpon>jr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="jr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="k2.Designer.vb">
+      <DependentUpon>k2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="k2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyEditEventArgs.vb" />
+    <Compile Include="KeyEventArgs.vb" />
+    <Compile Include="KeyPressEditEventArgs.vb" />
+    <Compile Include="ky.Designer.vb">
+      <DependentUpon>ky.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ky.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LabelCompassEnum.vb" />
+    <Compile Include="LabelProperty.vb" />
+    <Compile Include="LayersGroupTableBuilder.vb" />
+    <Compile Include="LayersMRPBuilder.vb" />
+    <Compile Include="LayerTreeSetting.vb" />
+    <Compile Include="LinePatternEnum.vb" />
+    <Compile Include="LineProperty.vb" />
+    <Compile Include="ListBoxProperty.vb" />
+    <Compile Include="ListItemFormatEventArgs.vb" />
+    <Compile Include="ListViewColumnCollections.vb" />
+    <Compile Include="ListViewDrawCellEventArgs.vb" />
+    <Compile Include="ListViewEditEventArgs.vb" />
+    <Compile Include="ListViewGroupCollections.vb" />
+    <Compile Include="ListViewImageManger.vb" />
+    <Compile Include="ListViewProperty.vb" />
+    <Compile Include="ListViewRowCollections.vb" />
+    <Compile Include="ListViewRowEventArgs.vb" />
+    <Compile Include="LLMCaller.vb" />
+    <Compile Include="LoadEventArgs.vb" />
+    <Compile Include="LookAndFeelProperty.vb" />
+    <Compile Include="lz.Designer.vb">
+      <DependentUpon>lz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lz.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.vb" />
+    <Compile Include="MaintableChangingEventArgs.vb" />
+    <Compile Include="MapProperty.vb" />
+    <Compile Include="MarkImageShape.vb" />
+    <Compile Include="MarkShapeEnum.vb" />
+    <Compile Include="MarkTextShape.vb" />
+    <Compile Include="Merger.vb" />
+    <Compile Include="MessageBoxA.vb" />
+    <Compile Include="MessageBoxForJs.vb" />
+    <Compile Include="mf.Designer.vb">
+      <DependentUpon>mf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MobileCard.vb" />
+    <Compile Include="MobileEmail.vb" />
+    <Compile Include="MobilePhone.vb" />
+    <Compile Include="MobileSMS.vb" />
+    <Compile Include="MobileText.vb" />
+    <Compile Include="MobileURL.vb" />
+    <Compile Include="MouseHoverCellEventArgs.vb" />
+    <Compile Include="MoveRowEventArgs.vb" />
+    <Compile Include="MRPExtendTables.vb" />
+    <Compile Include="mrpPlan.vb" />
+    <Compile Include="MRPTableCols.vb" />
+    <Compile Include="MultiDataMap.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="MyPortCollections.vb" />
+    <Compile Include="My\a.vb" />
+    <Compile Include="My\b.vb" />
+    <Compile Include="My\c.vb" />
+    <Compile Include="My\d.vb" />
+    <Compile Include="My\MySettings.Designer.vb">
+      <DependentUpon>MySettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My\MySettings.vb" />
+    <Compile Include="My\Resources\Foxtable.Resources.Designer.vb">
+      <DependentUpon>Foxtable.Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="NavBarProperty.vb" />
+    <Compile Include="NavigationCompletedEventArgs.vb" />
+    <Compile Include="NavigationStartingEventArgs.vb" />
+    <Compile Include="NavPageCollection.vb" />
+    <Compile Include="NetworkAvailabilityEventArgs.vb" />
+    <Compile Include="NewMessageEventArgs.vb" />
+    <Compile Include="NewWindowRequestedEventArgs.vb" />
+    <Compile Include="NumericComboBoxProperty.vb" />
+    <Compile Include="O.2.Designer.vb">
+      <DependentUpon>O.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o.Designer.vb">
+      <DependentUpon>o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O00.2.vb" />
+    <Compile Include="o00.vb" />
+    <Compile Include="o0000O.vb" />
+    <Compile Include="O000O.vb" />
+    <Compile Include="o000OOOO.vb" />
+    <Compile Include="o000O_o.vb" />
+    <Compile Include="O00o.vb" />
+    <Compile Include="O00Oo00ooO0_.vb" />
+    <Compile Include="O00OOO0o_00o.vb" />
+    <Compile Include="O00oOo0O_00_O.vb" />
+    <Compile Include="o00OOoo.vb" />
+    <Compile Include="O00OOOo_O0_O.vb" />
+    <Compile Include="O00_.vb" />
+    <Compile Include="o00_0__O.vb" />
+    <Compile Include="o00_o00.2.vb" />
+    <Compile Include="O00_O00.vb" />
+    <Compile Include="O00_Oooo0oo00.Designer.vb">
+      <DependentUpon>O00_Oooo0oo00.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="o00__0oo0.vb" />
+    <Compile Include="o0o.2.vb" />
+    <Compile Include="O0O.3.vb" />
+    <Compile Include="O0o.4.vb" />
+    <Compile Include="o0O.vb" />
+    <Compile Include="O0o0.vb" />
+    <Compile Include="O0O00.vb" />
+    <Compile Include="O0o000.vb" />
+    <Compile Include="o0o0o00.vb" />
+    <Compile Include="o0o0OO.vb" />
+    <Compile Include="O0O0oOO00_0OO.vb" />
+    <Compile Include="o0O0OOoOO.vb" />
+    <Compile Include="O0o0\00\$UNNAMED_TYPE$.vb" />
+    <Compile Include="o0o0_oo00Oo.vb" />
+    <Compile Include="O0Oo.vb" />
+    <Compile Include="O0OO000oo0O.vb" />
+    <Compile Include="O0oo000oO0oo_.vb" />
+    <Compile Include="O0oO0o0o.vb" />
+    <Compile Include="o0Oo0OO.vb" />
+    <Compile Include="O0oOo0_0.vb" />
+    <Compile Include="O0OooO0_0O.vb" />
+    <Compile Include="o0OoOOoOOo0.vb" />
+    <Compile Include="O0oOO_.vb" />
+    <Compile Include="o0ooo_0_00oO.vb" />
+    <Compile Include="O0oO_0.Designer.vb">
+      <DependentUpon>O0oO_0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O0oO_0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O0oo_0O.vb" />
+    <Compile Include="O0OO_oo0o.vb" />
+    <Compile Include="o0OO__.vb" />
+    <Compile Include="o0o_.vb" />
+    <Compile Include="O0o_00oO__0_.vb" />
+    <Compile Include="O0O_O0.vb" />
+    <Compile Include="o0o_Oo_o.vb" />
+    <Compile Include="o0O_O__o000.vb" />
+    <Compile Include="O0O__.Designer.vb">
+      <DependentUpon>O0O__.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="O0o__o0_o0.vb" />
+    <Compile Include="O0o__oo0O.vb" />
+    <Compile Include="o0O__ooOO00.vb" />
+    <Compile Include="o0o。.Designer.vb">
+      <DependentUpon>o0o。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o0o。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o0_.2.vb" />
+    <Compile Include="O0_.vb" />
+    <Compile Include="O0_000oo.vb" />
+    <Compile Include="o0_00Oo0o.vb" />
+    <Compile Include="O0_00_oo0oO_.vb" />
+    <Compile Include="o0_0oo00_o.vb" />
+    <Compile Include="O0_0oO__oo.vb" />
+    <Compile Include="O0_0_0O0___O.vb" />
+    <Compile Include="O0_0_0_0_.vb" />
+    <Compile Include="O0_0_0_Oo_o.vb" />
+    <Compile Include="o0_O.vb" />
+    <Compile Include="o0_OO0.vb" />
+    <Compile Include="O0_oOoo.vb" />
+    <Compile Include="O0_OoOoO.vb" />
+    <Compile Include="O0_OoO_O.vb" />
+    <Compile Include="O0_O_0O.vb" />
+    <Compile Include="O0_O_0__.vb" />
+    <Compile Include="o0_O_O0O__.vb" />
+    <Compile Include="o0_o_o_0.vb" />
+    <Compile Include="O0__000O.vb" />
+    <Compile Include="O0__00O__O0O.vb" />
+    <Compile Include="o0__oo0OOo.vb" />
+    <Compile Include="O0___o0_.Designer.vb">
+      <DependentUpon>O0___o0_.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="o0___oO.vb" />
+    <Compile Include="o0　　　　。。.Designer.vb">
+      <DependentUpon>o0　　　　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o0　　　　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o0。.Designer.vb">
+      <DependentUpon>o0。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o0。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OO.Designer.vb">
+      <DependentUpon>OO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OO0.2.vb" />
+    <Compile Include="oo0.3.vb" />
+    <Compile Include="oO0.Designer.vb">
+      <DependentUpon>oO0.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Oo0.vb" />
+    <Compile Include="Oo00.2.vb" />
+    <Compile Include="oo00.vb" />
+    <Compile Include="oo0000o0oo.vb" />
+    <Compile Include="oO00O0oO0o000.vb" />
+    <Compile Include="oo00o_.vb" />
+    <Compile Include="Oo0O.vb" />
+    <Compile Include="oo0O0oO_OOOo.Designer.vb">
+      <DependentUpon>oo0O0oO_OOOo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oo0O0oO_OOOo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oo0o0o_0_.vb" />
+    <Compile Include="oO0o0O_OO.vb" />
+    <Compile Include="oo0O0o___O.vb" />
+    <Compile Include="oO0o0_0oO0_oO.vb" />
+    <Compile Include="oO0oo.vb" />
+    <Compile Include="Oo0ooO0o_.vb" />
+    <Compile Include="oO0OOo0o__.vb" />
+    <Compile Include="oO0oooo.vb" />
+    <Compile Include="oo0OOO_0__.vb" />
+    <Compile Include="Oo0OO_oo.vb" />
+    <Compile Include="Oo0oo_O_O00__.vb" />
+    <Compile Include="oO0O_O.vb" />
+    <Compile Include="OO0o_o_Oo__o.vb" />
+    <Compile Include="Oo0O__.Designer.vb">
+      <DependentUpon>Oo0O__.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="OO0o__.vb" />
+    <Compile Include="oo0O__O0.vb" />
+    <Compile Include="oO0_.vb" />
+    <Compile Include="Oo0_0o0_OoO0O.vb" />
+    <Compile Include="oo0_0Oo.vb" />
+    <Compile Include="oo0_o0o_0o__.Designer.vb">
+      <DependentUpon>oo0_o0o_0o__.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="OO0_O_0O.vb" />
+    <Compile Include="OO0_o_oOo0.vb" />
+    <Compile Include="Oo0__Oo.vb" />
+    <Compile Include="Oo0__O__O_0__.vb" />
+    <Compile Include="oO0。.Designer.vb">
+      <DependentUpon>oO0。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oO0。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OOO.2.vb" />
+    <Compile Include="oOO.3.vb" />
+    <Compile Include="Ooo.4.vb" />
+    <Compile Include="OoO.5.vb" />
+    <Compile Include="ooO.6.vb" />
+    <Compile Include="ooo.vb" />
+    <Compile Include="ooo0.2.vb" />
+    <Compile Include="OOO0.vb" />
+    <Compile Include="ooo00oO.vb" />
+    <Compile Include="OoO00OooO_.vb" />
+    <Compile Include="OOo00o_0o0_.vb" />
+    <Compile Include="ooO0O.2.vb" />
+    <Compile Include="OoO0o.3.vb" />
+    <Compile Include="OOO0o.4.vb" />
+    <Compile Include="ooo0o.vb" />
+    <Compile Include="OOO0O0.vb" />
+    <Compile Include="OoO0o0oo__Oo.vb" />
+    <Compile Include="ooO0o0_oO0_0.vb" />
+    <Compile Include="oOo0o0__0.Designer.vb">
+      <DependentUpon>oOo0o0__0.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="oOO0oO000_0_0.vb" />
+    <Compile Include="oOO0ooO0__o00.vb" />
+    <Compile Include="OOO0oO_.vb" />
+    <Compile Include="oOO0oo_o0.vb" />
+    <Compile Include="ooO0O__o_o_O_.vb" />
+    <Compile Include="OOO0_.vb" />
+    <Compile Include="OOO0_00O.vb" />
+    <Compile Include="oOo0_o0Oo_00.vb" />
+    <Compile Include="oOO0_Oo0oO.vb" />
+    <Compile Include="Ooo0__.vb" />
+    <Compile Include="ooO0__O0_O.vb" />
+    <Compile Include="ooO0__OO.vb" />
+    <Compile Include="Ooo0___.vb" />
+    <Compile Include="OoO0___o.vb" />
+    <Compile Include="OOOO.2.vb" />
+    <Compile Include="OOoO.3.vb" />
+    <Compile Include="Oooo.vb" />
+    <Compile Include="OooO0.vb" />
+    <Compile Include="OooO00O.vb" />
+    <Compile Include="OoOo0O.vb" />
+    <Compile Include="oooO0o000O.vb" />
+    <Compile Include="oOOO0oo0_oO_o.Designer.vb">
+      <DependentUpon>oOOO0oo0_oO_o.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="OoOO0ooo.vb" />
+    <Compile Include="OoOO0Oo_oo0oO.vb" />
+    <Compile Include="ooOOO.2.vb" />
+    <Compile Include="ooOoO.vb" />
+    <Compile Include="OOOoo0.vb" />
+    <Compile Include="OoOoo00.vb" />
+    <Compile Include="oOOOo0oOOOO_.vb" />
+    <Compile Include="OooOo0___oO.vb" />
+    <Compile Include="OoOoOO0O_O_o.vb" />
+    <Compile Include="oooOooo.vb" />
+    <Compile Include="oOOooooO0o00.vb" />
+    <Compile Include="OOOooo_o.vb" />
+    <Compile Include="OOoOO_00O00.vb" />
+    <Compile Include="oooOo_0oo.vb" />
+    <Compile Include="oOOoo_0_0o_.Designer.vb">
+      <DependentUpon>oOOoo_0_0o_.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="oOOOO_Oo_.Designer.vb">
+      <DependentUpon>oOOOO_Oo_.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Oooo_0_o_0_.vb" />
+    <Compile Include="OoOO___oo.vb" />
+    <Compile Include="oOo_.2.vb" />
+    <Compile Include="OoO_.vb" />
+    <Compile Include="oOo_00o0o00_0.vb" />
+    <Compile Include="ooo_0o.2.vb" />
+    <Compile Include="ooO_0O.vb" />
+    <Compile Include="ooo_0O0.vb" />
+    <Compile Include="ooo_0O0o00.vb" />
+    <Compile Include="ooo_0_.vb" />
+    <Compile Include="OOo_o.Designer.vb">
+      <DependentUpon>OOo_o.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Ooo_O.vb" />
+    <Compile Include="OoO_O00.vb" />
+    <Compile Include="OoO_O0_OO0.vb" />
+    <Compile Include="OoO_oO.vb" />
+    <Compile Include="OoO_OO0o_0o.vb" />
+    <Compile Include="oOO_O_.vb" />
+    <Compile Include="oOo_O_0O.Designer.vb">
+      <DependentUpon>oOo_O_0O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oOo_O_0O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oOO_O__.vb" />
+    <Compile Include="OOO__0oo_oo.vb" />
+    <Compile Include="OOo__O.vb" />
+    <Compile Include="OOO__oooOOo.vb" />
+    <Compile Include="oOo__OO_.Designer.vb">
+      <DependentUpon>oOo__OO_.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="oOo___.vb" />
+    <Compile Include="Oo_.2.vb" />
+    <Compile Include="OO_.3.vb" />
+    <Compile Include="oO_.4.vb" />
+    <Compile Include="oo_.vb" />
+    <Compile Include="oO_0.2.vb" />
+    <Compile Include="Oo_0.vb" />
+    <Compile Include="OO_00oOO.vb" />
+    <Compile Include="oO_0OoO.vb" />
+    <Compile Include="Oo_0o_o.vb" />
+    <Compile Include="OO_0o_O_O.vb" />
+    <Compile Include="Oo_O0o0_.vb" />
+    <Compile Include="Oo_o0ooo.vb" />
+    <Compile Include="oO_oO000oo.vb" />
+    <Compile Include="OO_oO00o.vb" />
+    <Compile Include="oO_oo0Oo.vb" />
+    <Compile Include="oo_Oo0O_O.vb" />
+    <Compile Include="OO_oo0_0oo00.vb" />
+    <Compile Include="OO_OoOOO0oO.vb" />
+    <Compile Include="oo_OOOOooO.vb" />
+    <Compile Include="Oo_oO_00_o0.vb" />
+    <Compile Include="oO_OO_o0_.vb" />
+    <Compile Include="oO_o_0_o_O_o.vb" />
+    <Compile Include="OO_O__0oo.vb" />
+    <Compile Include="oo__.vb" />
+    <Compile Include="OO__oo_0ooo0_.vb" />
+    <Compile Include="oO__oO_0_O.vb" />
+    <Compile Include="oo__O__O_OoO.vb" />
+    <Compile Include="OO___.vb" />
+    <Compile Include="OO___OO0O_0.vb" />
+    <Compile Include="oo___ooo.vb" />
+    <Compile Include="OO___O_.Designer.vb">
+      <DependentUpon>OO___O_.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="OO___O_oOOO.vb" />
+    <Compile Include="oo　　0。　o。.Designer.vb">
+      <DependentUpon>oo　　0。　o。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oo　　0。　o。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo　　　。.Designer.vb">
+      <DependentUpon>oo　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oo　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oo　　。　。。.Designer.vb">
+      <DependentUpon>Oo　　。　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Oo　　。　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo　。_　　　。.Designer.vb">
+      <DependentUpon>oo　。_　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oo　。_　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oO　。。　O.Designer.vb">
+      <DependentUpon>oO　。。　O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oO　。。　O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oo。　。　。.Designer.vb">
+      <DependentUpon>oo。　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="oo。　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenFileDialogA.vb" />
+    <Compile Include="OpenFileDialogForjs.vb" />
+    <Compile Include="OpenQQMenuEventArgs.vb" />
+    <Compile Include="OuterTableBuilder.vb" />
+    <Compile Include="Output.vb" />
+    <Compile Include="OwerDrawMarkEventArgs.vb" />
+    <Compile Include="o_.2.Designer.vb">
+      <DependentUpon>o_.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o_.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_.3.Designer.vb">
+      <DependentUpon>O_.3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O_.3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_.Designer.vb">
+      <DependentUpon>O_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o_0.Designer.vb">
+      <DependentUpon>o_0.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="O_0.vb" />
+    <Compile Include="O_000O.vb" />
+    <Compile Include="o_00OOooo__0_.vb" />
+    <Compile Include="O_0OO.vb" />
+    <Compile Include="O_0Oo0o_0.vb" />
+    <Compile Include="o_0OO0_.vb" />
+    <Compile Include="o_0OOo0o_0O_.vb" />
+    <Compile Include="O_0oOoOo.2.vb" />
+    <Compile Include="O_0OOOoO.vb" />
+    <Compile Include="o_0oOOOOO__.vb" />
+    <Compile Include="o_0oooo_OO.vb" />
+    <Compile Include="O_0oOo_OO.vb" />
+    <Compile Include="o_0oo_OOO_0o_.vb" />
+    <Compile Include="O_0O_.vb" />
+    <Compile Include="O_0o_0o_o0O_.vb" />
+    <Compile Include="O_0_Oo.vb" />
+    <Compile Include="O_0__O_o_O.vb" />
+    <Compile Include="O_O.2.vb" />
+    <Compile Include="o_o.vb" />
+    <Compile Include="o_o0.2.vb" />
+    <Compile Include="o_O0.vb" />
+    <Compile Include="O_O0OO.vb" />
+    <Compile Include="o_o0ooOooO.vb" />
+    <Compile Include="o_O0oO_0.vb" />
+    <Compile Include="o_o0O_Ooo__O.vb" />
+    <Compile Include="o_o0_.vb" />
+    <Compile Include="o_O0_0O0.vb" />
+    <Compile Include="O_o0_0_o0.vb" />
+    <Compile Include="O_oo.2.vb" />
+    <Compile Include="o_oo.vb" />
+    <Compile Include="o_oo0.vb" />
+    <Compile Include="o_OO00o.vb" />
+    <Compile Include="O_Oo00Oo000O0.vb" />
+    <Compile Include="o_oo0_0_Oo0O_.vb" />
+    <Compile Include="O_OOO.2.vb" />
+    <Compile Include="o_OOO.vb" />
+    <Compile Include="o_oOOOoo_O_O.vb" />
+    <Compile Include="O_oOooO_O.vb" />
+    <Compile Include="o_OOO_o0_.vb" />
+    <Compile Include="o_Oo_o0O.vb" />
+    <Compile Include="o_OO_oOOO0o.vb" />
+    <Compile Include="o_OO_OOO_.vb" />
+    <Compile Include="O_oO__o0.vb" />
+    <Compile Include="O_O_.vb" />
+    <Compile Include="O_O_00.vb" />
+    <Compile Include="O_o_0o.vb" />
+    <Compile Include="o_o_0OO.vb" />
+    <Compile Include="o_o_O00_.vb" />
+    <Compile Include="O_o_o0O.vb" />
+    <Compile Include="o_o_O0OO_0__.vb" />
+    <Compile Include="o_O_O0O__.vb" />
+    <Compile Include="O_O_O0_O.vb" />
+    <Compile Include="O_O_OO.Designer.vb">
+      <DependentUpon>O_O_OO.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="o_o_Oo0__o_0.vb" />
+    <Compile Include="o_o_oOo__.vb" />
+    <Compile Include="O_O_o_oO0.vb" />
+    <Compile Include="o_O_o_oOoo__.vb" />
+    <Compile Include="O_o__00Ooo.vb" />
+    <Compile Include="O__.2.vb" />
+    <Compile Include="o__.vb" />
+    <Compile Include="o__000oO.vb" />
+    <Compile Include="O__000__Oo0.vb" />
+    <Compile Include="o__0OoO_.vb" />
+    <Compile Include="O__o.2.vb" />
+    <Compile Include="o__o.vb" />
+    <Compile Include="O__o00.vb" />
+    <Compile Include="o__OO.vb" />
+    <Compile Include="o__oOOo00oo0_.vb" />
+    <Compile Include="O__oO_o0_o_o.vb" />
+    <Compile Include="o__o_O0_.vb" />
+    <Compile Include="o__o_OO_o_.vb" />
+    <Compile Include="o__o_O_o0o0__.vb" />
+    <Compile Include="O___O_.vb" />
+    <Compile Include="o___o_O__.vb" />
+    <Compile Include="O_　0_。O。。.Designer.vb">
+      <DependentUpon>O_　0_。O。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O_　0_。O。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O_。　。.Designer.vb">
+      <DependentUpon>O_。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O_。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o_。。　　。.Designer.vb">
+      <DependentUpon>o_。。　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o_。。　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0.Designer.vb">
+      <DependentUpon>o　0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0　　。O.Designer.vb">
+      <DependentUpon>o　0　　。O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　0　　。O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0。.2.Designer.vb">
+      <DependentUpon>o　0。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　0。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　0。.Designer.vb">
+      <DependentUpon>o　0。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　0。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　0。。O.Designer.vb">
+      <DependentUpon>O　0。。O.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="O　O.Designer.vb">
+      <DependentUpon>O　O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　o　。00。.Designer.vb">
+      <DependentUpon>O　o　。00。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　o　。00。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　O　。o。　　。。。0.Designer.vb">
+      <DependentUpon>o　O　。o。　　。。。0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　O　。o。　　。。。0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　O。　。.Designer.vb">
+      <DependentUpon>O　O。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　O。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　_.Designer.vb">
+      <DependentUpon>O　_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　_　。_。.Designer.vb">
+      <DependentUpon>o　_　。_。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　_　。_。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　_　。。。.Designer.vb">
+      <DependentUpon>O　_　。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　_　。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　o　　　　　oo。。.Designer.vb">
+      <DependentUpon>O　　o　　　　　oo。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　o　　　　　oo。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　　_。.Designer.vb">
+      <DependentUpon>O　　　　_。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　　_。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　　　_。。。_。.Designer.vb">
+      <DependentUpon>O　　　　　_。。。_。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　　　_。。。_。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　　　　　。　　。　。.Designer.vb">
+      <DependentUpon>o　　　　　　。　　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　　　　　　。　　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　　。。　　O。O。.Designer.vb">
+      <DependentUpon>O　　　　。。　　O。O。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　　。。　　O。O。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　。　　。O　。。.Designer.vb">
+      <DependentUpon>O　　　。　　。O　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　。　　。O　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　。　。。。。　。.Designer.vb">
+      <DependentUpon>O　　　。　。。。。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　。　。。。。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　　。。。。_　　。.Designer.vb">
+      <DependentUpon>O　　　。。。。_　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　　。。。。_　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。.Designer.vb">
+      <DependentUpon>o　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　。　。。　。.Designer.vb">
+      <DependentUpon>O　　。　。。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。　。。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　。　。。。0.Designer.vb">
+      <DependentUpon>O　　。　。。。0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。　。。。0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　。。.2.Designer.vb">
+      <DependentUpon>O　　。。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。.Designer.vb">
+      <DependentUpon>o　　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。0。。　　。　。.Designer.vb">
+      <DependentUpon>o　　。。0。。　　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。0。。　　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。O.Designer.vb">
+      <DependentUpon>o　　。。O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。。　。。O　。.Designer.vb">
+      <DependentUpon>o　　。。。　。。O　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。。　。。O　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　　。。。。o.Designer.vb">
+      <DependentUpon>o　　。。。。o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　　。。。。o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　　。。。。。　。.Designer.vb">
+      <DependentUpon>O　　。。。。。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　　。。。。。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。.2.Designer.vb">
+      <DependentUpon>O　。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。.3.Designer.vb">
+      <DependentUpon>O　。.3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。.3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。.4.Designer.vb">
+      <DependentUpon>o　。.4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。.4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。.Designer.vb">
+      <DependentUpon>O　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。0.Designer.vb">
+      <DependentUpon>o　。0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。O.Designer.vb">
+      <DependentUpon>O　。O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。o　。。。。.Designer.vb">
+      <DependentUpon>o　。o　。。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。o　。。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。o。　。_。　　。.Designer.vb">
+      <DependentUpon>o　。o。　。_。　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。o。　。_。　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　o。.Designer.vb">
+      <DependentUpon>O　。　o。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　o。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　o。。.Designer.vb">
+      <DependentUpon>O　。　o。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　o。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。　　。.Designer.vb">
+      <DependentUpon>o　。　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。　。.Designer.vb">
+      <DependentUpon>o　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　。　　　。。.Designer.vb">
+      <DependentUpon>O　。　。　　　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　。　　　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。　。　。.2.Designer.vb">
+      <DependentUpon>O　。　。　。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。　。　。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。　。　。.Designer.vb">
+      <DependentUpon>o　。　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。.2.Designer.vb">
+      <DependentUpon>O　。。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。.Designer.vb">
+      <DependentUpon>O　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。0。　__。.Designer.vb">
+      <DependentUpon>O　。。0。　__。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。0。　__。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。O　_。.Designer.vb">
+      <DependentUpon>O　。。O　_。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。O　_。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。O。　　　　。.Designer.vb">
+      <DependentUpon>o　。。O。　　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。O。　　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　0.Designer.vb">
+      <DependentUpon>o　。。　0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　　　　　　。.Designer.vb">
+      <DependentUpon>o　。。　　　　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　　　　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　　。　。　。.Designer.vb">
+      <DependentUpon>o　。。　　。　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　　。　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。　。。　。。。.Designer.vb">
+      <DependentUpon>o　。。　。。　。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。　。。　。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。。_。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。。_。　　.Designer.vb">
+      <DependentUpon>O　。。。_。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。.Designer.vb">
+      <DependentUpon>o　。。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O　。。。。0。。.Designer.vb">
+      <DependentUpon>O　。。。。0。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O　。。。。0。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。_　　。。。。.Designer.vb">
+      <DependentUpon>o　。。。。_　　。。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。_　　。。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。。O　　　。.Designer.vb">
+      <DependentUpon>o　。。。。。O　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。。O　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。。。.Designer.vb">
+      <DependentUpon>o　。。。。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o　。。。。。。　　　。.Designer.vb">
+      <DependentUpon>o　。。。。。。　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o　。。。。。。　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。.2.Designer.vb">
+      <DependentUpon>O。.2.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="o。.3.Designer.vb">
+      <DependentUpon>o。.3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。.3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。.Designer.vb">
+      <DependentUpon>O。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。0　　　　　。　。.Designer.vb">
+      <DependentUpon>O。0　　　　　。　。.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="O。0　。.Designer.vb">
+      <DependentUpon>O。0　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。0　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。0。O　。。。.Designer.vb">
+      <DependentUpon>O。0。O　。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。0。O　。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。0。　。.Designer.vb">
+      <DependentUpon>o。0。　。.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="O。o.Designer.vb">
+      <DependentUpon>O。o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。o_。。。　。o.Designer.vb">
+      <DependentUpon>O。o_。。。　。o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。o_。。。　。o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。o　。　　_。　。。.Designer.vb">
+      <DependentUpon>O。o　。　　_。　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。o　。　　_。　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。o。。.Designer.vb">
+      <DependentUpon>O。o。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。o。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。o。。　。0。　。。.Designer.vb">
+      <DependentUpon>o。o。。　。0。　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。o。。　。0。　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。_.Designer.vb">
+      <DependentUpon>o。_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。_　。.Designer.vb">
+      <DependentUpon>O。_　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。_　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。_　。_。。。O.Designer.vb">
+      <DependentUpon>o。_　。_。。。O.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。_　。_。。。O.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。_。　。.Designer.vb">
+      <DependentUpon>O。_。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。_。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　0.Designer.vb">
+      <DependentUpon>O。　0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　0_。。。。.Designer.vb">
+      <DependentUpon>o。　0_。。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　0_。。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　0。　。.Designer.vb">
+      <DependentUpon>o。　　0。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　0。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　_　0　。　。.Designer.vb">
+      <DependentUpon>O。　　_　0　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　_　0　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　　0.Designer.vb">
+      <DependentUpon>o。　　　0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　　0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　　O。　。。.Designer.vb">
+      <DependentUpon>O。　　　O。　。。.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="O。　　　　。　。.Designer.vb">
+      <DependentUpon>O。　　　　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　　　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　　。.Designer.vb">
+      <DependentUpon>o。　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　　。。.Designer.vb">
+      <DependentUpon>o。　　　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　　。。。。。。。.Designer.vb">
+      <DependentUpon>O。　　　。。。。。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　　。。。。。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　。.Designer.vb">
+      <DependentUpon>o。　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　。　o.Designer.vb">
+      <DependentUpon>O。　　。　o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　。　o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　。　。.Designer.vb">
+      <DependentUpon>O。　　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　　。。。0。.Designer.vb">
+      <DependentUpon>o。　　。。。0。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　　。。。0。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　　。。。　。　0　0.Designer.vb">
+      <DependentUpon>O。　　。。。　。　0　0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　　。。。　。　0　0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。.2.Designer.vb">
+      <DependentUpon>O。　。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。.3.Designer.vb">
+      <DependentUpon>O。　。.3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。.3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。.4.Designer.vb">
+      <DependentUpon>o。　。.4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。.4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。.Designer.vb">
+      <DependentUpon>O。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。_.Designer.vb">
+      <DependentUpon>o。　。_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。_。　　。　。.Designer.vb">
+      <DependentUpon>O。　。_。　　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。_。　　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。　O。　。.Designer.vb">
+      <DependentUpon>o。　。　O。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。　O。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。　　。.Designer.vb">
+      <DependentUpon>O。　。　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。　　。_.Designer.vb">
+      <DependentUpon>o。　。　　。_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。　　。_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。　　。。。　。。。.Designer.vb">
+      <DependentUpon>o。　。　　。。。　。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。　　。。。　。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。　。.Designer.vb">
+      <DependentUpon>O。　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。。.2.Designer.vb">
+      <DependentUpon>o。　。。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。.Designer.vb">
+      <DependentUpon>O。　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。O。oo。。。.Designer.vb">
+      <DependentUpon>O。　。。O。oo。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。。O。oo。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。。　　。　。.Designer.vb">
+      <DependentUpon>o。　。。　　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。。　　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。　。o。o。。.Designer.vb">
+      <DependentUpon>O。　。。　。o。o。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。。　。o。o。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。　。。。　　。。.Designer.vb">
+      <DependentUpon>o。　。。。　　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。　。。。　　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。　。。。。。。　。　。.Designer.vb">
+      <DependentUpon>O。　。。。。。。　。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。　。。。。。。　。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。.2.Designer.vb">
+      <DependentUpon>O。。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。.3.Designer.vb">
+      <DependentUpon>O。。.3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。.3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。.4.Designer.vb">
+      <DependentUpon>O。。.4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。.4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。.5.Designer.vb">
+      <DependentUpon>o。。.5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。.5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。.6.Designer.vb">
+      <DependentUpon>O。。.6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。.6.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。.Designer.vb">
+      <DependentUpon>o。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。o.Designer.vb">
+      <DependentUpon>O。。o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。O　。　　。.Designer.vb">
+      <DependentUpon>O。。O　。　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。O　。　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。_。。　O。.Designer.vb">
+      <DependentUpon>O。。_。。　O。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。_。。　O。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　0O　o　　　。.Designer.vb">
+      <DependentUpon>o。。　0O　o　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　0O　o　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。　　oo　。.Designer.vb">
+      <DependentUpon>O。。　　oo　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　　oo　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　　　。　。。。.Designer.vb">
+      <DependentUpon>o。。　　　　。　。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　　　。　。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　　　。。.Designer.vb">
+      <DependentUpon>o。。　　　　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　　　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　　。.Designer.vb">
+      <DependentUpon>o。。　　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　　。.Designer.vb">
+      <DependentUpon>o。。　　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。　　。。　。。。.Designer.vb">
+      <DependentUpon>O。。　　。。　。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　　。。　。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。　。　　。　。。.Designer.vb">
+      <DependentUpon>o。。　。　　。　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。　。　　。　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。　。。　　_.Designer.vb">
+      <DependentUpon>O。。　。。　　_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。　。。　　_.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。.Designer.vb">
+      <DependentUpon>O。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="o。。。　。.Designer.vb">
+      <DependentUpon>o。。。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="o。。。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。　。。。。　0.Designer.vb">
+      <DependentUpon>O。。。　。。。。　0.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。　。。。。　0.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。.2.Designer.vb">
+      <DependentUpon>O。。。。.2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。.2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。.Designer.vb">
+      <DependentUpon>O。。。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。_o.Designer.vb">
+      <DependentUpon>O。。。。_o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。_o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。　o.Designer.vb">
+      <DependentUpon>O。。。。　o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。　　O。。。o.Designer.vb">
+      <DependentUpon>O。。。。　　O。。。o.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　　O。。。o.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。　　。。　　。。.Designer.vb">
+      <DependentUpon>O。。。。　　。。　　。。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。　　。。　　。。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O。。。。。　。.Designer.vb">
+      <DependentUpon>O。。。。。　。.vb</DependentUpon>
+    </Compile>
+    <Compile Include="O。。。。。　。.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PageFooterEventArgs.vb" />
+    <Compile Include="PageHeaderEventArgs.vb" />
+    <Compile Include="PainterProperty.vb" />
+    <Compile Include="PanelProperty.vb" />
+    <Compile Include="ParentChildPair.vb" />
+    <Compile Include="ParsingEventArgs.vb" />
+    <Compile Include="PDFCreator.vb" />
+    <Compile Include="PDFSource.vb" />
+    <Compile Include="PDFViewerProperty.vb" />
+    <Compile Include="PictureBoxProperty.vb" />
+    <Compile Include="PictureViewer.Designer.vb">
+      <DependentUpon>PictureViewer.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="PictureViewerProperty.vb" />
+    <Compile Include="Port.vb" />
+    <Compile Include="PriceTable.vb" />
+    <Compile Include="PrintDoc.vb" />
+    <Compile Include="PrintInfo.vb" />
+    <Compile Include="PrintPageProperty.vb" />
+    <Compile Include="Process.vb" />
+    <Compile Include="ProgressBarProperty.vb" />
+    <Compile Include="ProjectConfig.vb" />
+    <Compile Include="ProjectProperty.vb" />
+    <Compile Include="PropertyBase.vb" />
+    <Compile Include="PY.vb" />
+    <Compile Include="PYJS.vb" />
+    <Compile Include="QueryBuilder.vb" />
+    <Compile Include="RadioButtonProperty.vb" />
+    <Compile Include="ReceivedCallEventArgs.vb" />
+    <Compile Include="RecordGridProperty.vb" />
+    <Compile Include="Relation.vb" />
+    <Compile Include="Report.vb" />
+    <Compile Include="ReportCollection.vb" />
+    <Compile Include="ReportProperty.vb" />
+    <Compile Include="RequestEventArgs.vb" />
+    <Compile Include="Ribbon.vb" />
+    <Compile Include="RibbonApplicationMenu.vb" />
+    <Compile Include="RibbonBase.vb" />
+    <Compile Include="RibbonBottomToolBar.vb" />
+    <Compile Include="RibbonButton.vb" />
+    <Compile Include="RibbonButtonEventArgs.vb" />
+    <Compile Include="RibbonCheckBox.vb" />
+    <Compile Include="RibbonCheckBoxEventArgs.vb" />
+    <Compile Include="RibbonCodeReportList.vb" />
+    <Compile Include="RibbonColorPicker.vb" />
+    <Compile Include="RibbonColorPickerEventArgs.vb" />
+    <Compile Include="RibbonComboBox.vb" />
+    <Compile Include="RibbonComboBoxEventArgs.vb" />
+    <Compile Include="RibbonConfigToolBar.vb" />
+    <Compile Include="RibbonCrossTableList.vb" />
+    <Compile Include="RibbonDatePicker.vb" />
+    <Compile Include="RibbonDatePickerEventArgs.vb" />
+    <Compile Include="RibbonDropDownItem.vb" />
+    <Compile Include="RibbonEventArgs.vb" />
+    <Compile Include="RibbonExcelReportList.vb" />
+    <Compile Include="RibbonFontComboBox.vb" />
+    <Compile Include="RibbonFontComboBoxEventArgs.vb" />
+    <Compile Include="RibbonGallery.vb" />
+    <Compile Include="RibbonGalleryEventArgs.vb" />
+    <Compile Include="RibbonGalleryItem.vb" />
+    <Compile Include="RibbonGroup.vb" />
+    <Compile Include="RibbonGroupEventArgs.vb" />
+    <Compile Include="RibbonGroupTableList.vb" />
+    <Compile Include="RibbonItem.vb" />
+    <Compile Include="RibbonItemCollectionEditor.vb" />
+    <Compile Include="RibbonItemContainer.vb" />
+    <Compile Include="RibbonItemTypeEnum.vb" />
+    <Compile Include="RibbonLabel.vb" />
+    <Compile Include="RibbonLabelEventArgs.vb" />
+    <Compile Include="RibbonMenuButton.vb" />
+    <Compile Include="RibbonMenuButtonEventArgs.vb" />
+    <Compile Include="RibbonMenuJs.vb" />
+    <Compile Include="RibbonMenu\ApplicationMenu.vb" />
+    <Compile Include="RibbonMenu\BottomToolBar.vb" />
+    <Compile Include="RibbonMenu\Button.vb" />
+    <Compile Include="RibbonMenu\CheckBox.vb" />
+    <Compile Include="RibbonMenu\ColorPicker.vb" />
+    <Compile Include="RibbonMenu\ComboBox.vb" />
+    <Compile Include="RibbonMenu\ConfigBar.vb" />
+    <Compile Include="RibbonMenu\ContextCommand.vb" />
+    <Compile Include="RibbonMenu\ContextCommandCollection.vb" />
+    <Compile Include="RibbonMenu\ContextCommandEnumerator.vb" />
+    <Compile Include="RibbonMenu\ContextCommandMenu.vb" />
+    <Compile Include="RibbonMenu\ContextMenu.vb" />
+    <Compile Include="RibbonMenu\ContextMenuCollection.vb" />
+    <Compile Include="RibbonMenu\ContextMenuEnumerator.vb" />
+    <Compile Include="RibbonMenu\DatePicker.vb" />
+    <Compile Include="RibbonMenu\EditBox.vb" />
+    <Compile Include="RibbonMenu\FontComboBox.vb" />
+    <Compile Include="RibbonMenu\Gallery.vb" />
+    <Compile Include="RibbonMenu\GalleryItem.vb" />
+    <Compile Include="RibbonMenu\GalleryItemCollection.vb" />
+    <Compile Include="RibbonMenu\GalleryItemEnumerator.vb" />
+    <Compile Include="RibbonMenu\Group.vb" />
+    <Compile Include="RibbonMenu\Label.vb" />
+    <Compile Include="RibbonMenu\MenuButton.vb" />
+    <Compile Include="RibbonMenu\NumericBox.vb" />
+    <Compile Include="RibbonMenu\ProgressBar.vb" />
+    <Compile Include="RibbonMenu\Qat.vb" />
+    <Compile Include="RibbonMenu\RibbonGroupCollection.vb" />
+    <Compile Include="RibbonMenu\RibbonGroupEnumerator.vb" />
+    <Compile Include="RibbonMenu\RibbonItem.vb" />
+    <Compile Include="RibbonMenu\RibbonItemCollection.vb" />
+    <Compile Include="RibbonMenu\RibbonItemEnumerator.vb" />
+    <Compile Include="RibbonMenu\RibbonTabCollection.vb" />
+    <Compile Include="RibbonMenu\RibbonTabEnumerator.vb" />
+    <Compile Include="RibbonMenu\RibbonTabGroupCollection.vb" />
+    <Compile Include="RibbonMenu\RibbonTabGroupEnumerator.vb" />
+    <Compile Include="RibbonMenu\Separator.vb" />
+    <Compile Include="RibbonMenu\SplitButton.vb" />
+    <Compile Include="RibbonMenu\StatusBar.vb" />
+    <Compile Include="RibbonMenu\Tab.vb" />
+    <Compile Include="RibbonMenu\TabGroup.vb" />
+    <Compile Include="RibbonMenu\TextBox.vb" />
+    <Compile Include="RibbonMenu\TimePicker.vb" />
+    <Compile Include="RibbonMenu\ToggleButton.vb" />
+    <Compile Include="RibbonMenu\ToggleGroup.vb" />
+    <Compile Include="RibbonMenu\ToolBar.vb" />
+    <Compile Include="RibbonMenu\TopToolBar.vb" />
+    <Compile Include="RibbonMenu\TrackBar.vb" />
+    <Compile Include="RibbonNumericBox.vb" />
+    <Compile Include="RibbonNumericBoxEventArgs.vb" />
+    <Compile Include="RibbonPaneEnum.vb" />
+    <Compile Include="RibbonPaperList.vb" />
+    <Compile Include="RibbonProgressBar.vb" />
+    <Compile Include="RibbonProgressBarEventArgs.vb" />
+    <Compile Include="RibbonQat.vb" />
+    <Compile Include="RibbonSeparator.vb" />
+    <Compile Include="RibbonSeparatorEventArgs.vb" />
+    <Compile Include="RibbonSplitButton.vb" />
+    <Compile Include="RibbonSplitButtonEventArgs.vb" />
+    <Compile Include="RibbonSubtotalModeList.vb" />
+    <Compile Include="RibbonTab.vb" />
+    <Compile Include="RibbonTabCollection.vb" />
+    <Compile Include="RibbonTabEventArgs.vb" />
+    <Compile Include="RibbonTableViewList.vb" />
+    <Compile Include="RibbonTextBox.vb" />
+    <Compile Include="RibbonTextBoxEventArgs.vb" />
+    <Compile Include="RibbonTimePicker.vb" />
+    <Compile Include="RibbonTimePickerEventArgs.vb" />
+    <Compile Include="RibbonToggleButton.vb" />
+    <Compile Include="RibbonToggleButtonEventArgs.vb" />
+    <Compile Include="RibbonToggleGroup.vb" />
+    <Compile Include="RibbonToggleGroupEventArgs.vb" />
+    <Compile Include="RibbonToolBar.vb" />
+    <Compile Include="RibbonToolBarEventArgs.vb" />
+    <Compile Include="RibbonTopTab.vb" />
+    <Compile Include="RibbonTopTabCollection.vb" />
+    <Compile Include="RibbonTopToolBar.vb" />
+    <Compile Include="RibbonTrackBar.vb" />
+    <Compile Include="RibbonTrackBarEventArgs.vb" />
+    <Compile Include="RibbonWindowList.vb" />
+    <Compile Include="RibbonWordReportList.vb" />
+    <Compile Include="Row.vb" />
+    <Compile Include="RowColEventArgs.vb" />
+    <Compile Include="RowCollection.vb" />
+    <Compile Include="RowColPositionEventArgs.vb" />
+    <Compile Include="SaveFileDialogA.vb" />
+    <Compile Include="SaveFileDialogForjs.vb" />
+    <Compile Include="ScriptDialogOpeningEventArgs.vb" />
+    <Compile Include="SendkeysJs.vb" />
+    <Compile Include="SendTypeEnum.vb" />
+    <Compile Include="SentMsgStatusEventArgs.vb" />
+    <Compile Include="Server_ChangeUserPasswordEventArgs.vb" />
+    <Compile Include="Server_MessageEventargs.vb" />
+    <Compile Include="Server_UserEventArgs.vb" />
+    <Compile Include="Server_UserLoggingEventArgs.vb" />
+    <Compile Include="Server_UserLogoutEventArgs.vb" />
+    <Compile Include="SetupEditorEventArgs.vb" />
+    <Compile Include="ShowErrorMessageEventArgs.vb" />
+    <Compile Include="SimpleNodeProperty.vb" />
+    <Compile Include="SortEventArgs.vb" />
+    <Compile Include="SourceChangedEventArgs.vb" />
+    <Compile Include="SplitContainerProperty.vb" />
+    <Compile Include="SQLCommand.vb" />
+    <Compile Include="SQLCrossTableBuilder.vb" />
+    <Compile Include="SQLGroupTableBuilder.vb" />
+    <Compile Include="SQLJoinTableBuilder.vb" />
+    <Compile Include="StatusBar.vb" />
+    <Compile Include="StockTable.vb" />
+    <Compile Include="StripCollection.vb" />
+    <Compile Include="StripItemCollection.vb" />
+    <Compile Include="StripItemEventArgs.vb" />
+    <Compile Include="StripItemTypeEnum.vb" />
+    <Compile Include="StripItemTypeEnum2.vb" />
+    <Compile Include="StripTypeEnum.vb" />
+    <Compile Include="StripTypeEnum2.vb" />
+    <Compile Include="StructureCompareResult.vb" />
+    <Compile Include="SubtotalGroup.vb" />
+    <Compile Include="SubtotalGroupCollection.vb" />
+    <Compile Include="SubtotalModeProperty.vb" />
+    <Compile Include="Syscmd\Column.vb" />
+    <Compile Include="Syscmd\Edit.vb" />
+    <Compile Include="Syscmd\Filter.vb" />
+    <Compile Include="Syscmd\GridTree.vb" />
+    <Compile Include="Syscmd\Project.vb" />
+    <Compile Include="Syscmd\Row.vb" />
+    <Compile Include="Syscmd\Sort.vb" />
+    <Compile Include="Syscmd\Table.vb" />
+    <Compile Include="TabControlProperty.vb" />
+    <Compile Include="Table.vb" />
+    <Compile Include="TableCollection.vb" />
+    <Compile Include="TableDataMap.vb" />
+    <Compile Include="TableEventArgs.vb" />
+    <Compile Include="TableGridProperty.vb" />
+    <Compile Include="TableProperty.vb" />
+    <Compile Include="TableViewProperty.vb" />
+    <Compile Include="TabPageChangingEventArgs.vb" />
+    <Compile Include="TabPageCollection.vb" />
+    <Compile Include="TempBindingTable.vb" />
+    <Compile Include="tempDataTableCollection.vb" />
+    <Compile Include="TextBoxProperty.vb" />
+    <Compile Include="TextImageRelationEnum.vb" />
+    <Compile Include="TextPositionEnum.vb" />
+    <Compile Include="TileSoureEnum.vb" />
+    <Compile Include="Timer.vb" />
+    <Compile Include="TimerCollection.vb" />
+    <Compile Include="TimerProperty.vb" />
+    <Compile Include="TimeSpanBoxProperty.vb" />
+    <Compile Include="TopicBarProperty.vb" />
+    <Compile Include="TopicLinkCollection.vb" />
+    <Compile Include="TopicLinkEventArgs.vb" />
+    <Compile Include="TopicLinkProperty.vb" />
+    <Compile Include="TopicPageCollection.vb" />
+    <Compile Include="TopicPageEventArgs.vb" />
+    <Compile Include="TopicPageProperty.vb" />
+    <Compile Include="TotalCollection.vb" />
+    <Compile Include="TotalOn.vb" />
+    <Compile Include="TrackBarProperty.vb" />
+    <Compile Include="TreeNodeEditEventArgs.vb" />
+    <Compile Include="TreeTypeEnum.vb" />
+    <Compile Include="TreeViewEventArgs.vb" />
+    <Compile Include="TreeViewProperty.vb" />
+    <Compile Include="UDPClient.vb" />
+    <Compile Include="UDPClient_MessageReceived.vb" />
+    <Compile Include="UKey.vb" />
+    <Compile Include="UpdateRowEventArgs.vb" />
+    <Compile Include="UpDownButtonClickEventArgs.vb" />
+    <Compile Include="UserFunctions.vb" />
+    <Compile Include="UserInfo.vb" />
+    <Compile Include="UserInfos.vb" />
+    <Compile Include="UserProperty.vb" />
+    <Compile Include="ValidateEditEventArgs.vb" />
+    <Compile Include="VarsCollection.vb" />
+    <Compile Include="VectorRecord.vb" />
+    <Compile Include="VirtualLayer.vb" />
+    <Compile Include="VirtualTileSource.vb" />
+    <Compile Include="VisualStyleEnum.vb" />
+    <Compile Include="wActionMenu.vb" />
+    <Compile Include="wActionSheet.vb" />
+    <Compile Include="wArticle.vb" />
+    <Compile Include="wButton.vb" />
+    <Compile Include="wButtonGroup.vb" />
+    <Compile Include="wCheck.vb" />
+    <Compile Include="wCheckGroup.vb" />
+    <Compile Include="wDataList.vb" />
+    <Compile Include="wDialog.vb" />
+    <Compile Include="WebBrowserProperty.vb" />
+    <Compile Include="WebMessageReceivedEventArgs.vb" />
+    <Compile Include="WebResourceRequestedEventArgs.vb" />
+    <Compile Include="WebResourceResponseReceivedEventArgs.vb" />
+    <Compile Include="WebViewer.vb" />
+    <Compile Include="WebViewerProperty.vb" />
+    <Compile Include="WeChatMessageReceived.vb" />
+    <Compile Include="wElement.vb" />
+    <Compile Include="weMessageReceived.vb" />
+    <Compile Include="wForm.vb" />
+    <Compile Include="wGallery.vb" />
+    <Compile Include="wGrid.vb" />
+    <Compile Include="wGridCell.vb" />
+    <Compile Include="wGroupTitle.vb" />
+    <Compile Include="wImage.vb" />
+    <Compile Include="WinForm\BarCode.vb" />
+    <Compile Include="WinForm\BarCodeBuilder.vb" />
+    <Compile Include="WinForm\Button.vb" />
+    <Compile Include="WinForm\Calendar.vb" />
+    <Compile Include="WinForm\Chart.vb" />
+    <Compile Include="WinForm\ChartAxis.vb" />
+    <Compile Include="WinForm\ChartDataArray.vb" />
+    <Compile Include="WinForm\ChartSerialCollection.vb" />
+    <Compile Include="WinForm\ChartSeries.vb" />
+    <Compile Include="WinForm\CheckBox.vb" />
+    <Compile Include="WinForm\CheckedComboBox.vb" />
+    <Compile Include="WinForm\CheckedListBox.vb" />
+    <Compile Include="WinForm\ColorLabel.vb" />
+    <Compile Include="WinForm\ColorPicker.vb" />
+    <Compile Include="WinForm\ComboBox.vb" />
+    <Compile Include="WinForm\Control.vb" />
+    <Compile Include="WinForm\DateTimePicker.vb" />
+    <Compile Include="WinForm\DropDownBox.vb" />
+    <Compile Include="WinForm\FileManager.vb" />
+    <Compile Include="WinForm\FilterTree.vb" />
+    <Compile Include="WinForm\FontPicker.vb" />
+    <Compile Include="WinForm\Form.vb" />
+    <Compile Include="WinForm\GanttView.vb" />
+    <Compile Include="WinForm\Gauges.vb" />
+    <Compile Include="WinForm\GroupBox.vb" />
+    <Compile Include="WinForm\InlineTree.vb" />
+    <Compile Include="WinForm\Label.vb" />
+    <Compile Include="WinForm\LayersTree.vb" />
+    <Compile Include="WinForm\Line.vb" />
+    <Compile Include="WinForm\ListBox.vb" />
+    <Compile Include="WinForm\ListView.vb" />
+    <Compile Include="WinForm\ListViewCell.vb" />
+    <Compile Include="WinForm\ListViewColumn.vb" />
+    <Compile Include="WinForm\ListViewGroup.vb" />
+    <Compile Include="WinForm\ListViewRow.vb" />
+    <Compile Include="WinForm\LoadTree.vb" />
+    <Compile Include="WinForm\Map.vb" />
+    <Compile Include="WinForm\NavBar.vb" />
+    <Compile Include="WinForm\NavPage.vb" />
+    <Compile Include="WinForm\NumericComboBox.vb" />
+    <Compile Include="WinForm\Painter.vb" />
+    <Compile Include="WinForm\Panel.vb" />
+    <Compile Include="WinForm\PDFViewer.vb" />
+    <Compile Include="WinForm\PictureBox.vb" />
+    <Compile Include="WinForm\PictureViewer.vb" />
+    <Compile Include="WinForm\ProgressBar.vb" />
+    <Compile Include="WinForm\RadioButton.vb" />
+    <Compile Include="WinForm\RecordGrid.vb" />
+    <Compile Include="WinForm\SplitContainer.vb" />
+    <Compile Include="WinForm\SplitPanel.vb" />
+    <Compile Include="WinForm\Strip.vb" />
+    <Compile Include="WinForm\StripItem.vb" />
+    <Compile Include="WinForm\TabControl.vb" />
+    <Compile Include="WinForm\Table.vb" />
+    <Compile Include="WinForm\TabPage.vb" />
+    <Compile Include="WinForm\TextBox.vb" />
+    <Compile Include="WinForm\TimeSpanBox.vb" />
+    <Compile Include="WinForm\TopicBar.vb" />
+    <Compile Include="WinForm\TopicLink.vb" />
+    <Compile Include="WinForm\TopicPage.vb" />
+    <Compile Include="WinForm\TrackBar.vb" />
+    <Compile Include="WinForm\TreeNode.vb" />
+    <Compile Include="WinForm\TreeNodes.vb" />
+    <Compile Include="WinForm\TreeView.vb" />
+    <Compile Include="WinForm\WebBrowser.vb" />
+    <Compile Include="WinForm\WebViewer.vb" />
+    <Compile Include="wInput.vb" />
+    <Compile Include="wInputCell.vb" />
+    <Compile Include="wInputGroup.vb" />
+    <Compile Include="wLabel.vb" />
+    <Compile Include="wListGroup.vb" />
+    <Compile Include="wListIem.vb" />
+    <Compile Include="wMsgPage.vb" />
+    <Compile Include="WordCreator.vb" />
+    <Compile Include="WordReport.vb" />
+    <Compile Include="Word\Report.vb" />
+    <Compile Include="Word\ReportCollection.vb" />
+    <Compile Include="Word\ReportProperty.vb" />
+    <Compile Include="Word\WordFunctions.vb" />
+    <Compile Include="wPage.vb" />
+    <Compile Include="wPageFooter.vb" />
+    <Compile Include="wPageTitle.vb" />
+    <Compile Include="wPanel.vb" />
+    <Compile Include="wPanelGroup.vb" />
+    <Compile Include="wPreview.vb" />
+    <Compile Include="wProgress.vb" />
+    <Compile Include="wRadioGroup.vb" />
+    <Compile Include="wRadion.vb" />
+    <Compile Include="wRawHtml.vb" />
+    <Compile Include="wRowCollection.vb" />
+    <Compile Include="wSelect.vb" />
+    <Compile Include="wSwitch.vb" />
+    <Compile Include="wTabbar.vb" />
+    <Compile Include="wTabButton.vb" />
+    <Compile Include="wTable.vb" />
+    <Compile Include="wTableRow.vb" />
+    <Compile Include="wTextArea.vb" />
+    <Compile Include="wToast.vb" />
+    <Compile Include="wToptips.vb" />
+    <Compile Include="wui.vb" />
+    <Compile Include="wUploader.vb" />
+    <Compile Include="wVcodeButton.vb" />
+    <Compile Include="WXBizCrypt.vb" />
+    <Compile Include="XLS\a.vb" />
+    <Compile Include="XLS\AlignHorzEnum.vb" />
+    <Compile Include="XLS\AlignVertEnum.vb" />
+    <Compile Include="XLS\b.vb" />
+    <Compile Include="XLS\Book.vb" />
+    <Compile Include="XLS\c.vb" />
+    <Compile Include="XLS\Cell.vb" />
+    <Compile Include="XLS\Col.vb" />
+    <Compile Include="XLS\ColColection.vb" />
+    <Compile Include="XLS\DiagonalEnum.vb" />
+    <Compile Include="XLS\LineStyleEnum.vb" />
+    <Compile Include="XLS\Picture.vb" />
+    <Compile Include="XLS\PrintSetting.vb" />
+    <Compile Include="XLS\Report.vb" />
+    <Compile Include="XLS\ReportCollection.vb" />
+    <Compile Include="XLS\ReportProperty.vb" />
+    <Compile Include="XLS\Row.vb" />
+    <Compile Include="XLS\RowCollection.vb" />
+    <Compile Include="XLS\Sheet.vb" />
+    <Compile Include="XLS\SheetCollection.vb" />
+    <Compile Include="XLS\Style.vb" />
+    <Compile Include="XLS\XLSFunctions.vb" />
+    <Compile Include="XObject.vb" />
+    <Compile Include="YieldTable.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="af.resx">
+      <DependentUpon>af.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="C1\Win\C1GanttView\4.resx" />
+    <EmbeddedResource Include="ControlHolder.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ControlHolder.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="d0.resx">
+      <DependentUpon>d0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="di.resx">
+      <DependentUpon>di.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="du.resx">
+      <DependentUpon>du.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ef.resx">
+      <DependentUpon>ef.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ev.resx">
+      <DependentUpon>ev.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exe.licenses" />
+    <EmbeddedResource Include="f4.resx">
+      <DependentUpon>f4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileManager.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileManager.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPanel.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FormPanel.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="g1.resx">
+      <DependentUpon>g1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="g2.resx">
+      <DependentUpon>g2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gg.resx">
+      <DependentUpon>gg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gv.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>gv.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="h0.resx">
+      <DependentUpon>h0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="j8.resx">
+      <DependentUpon>j8.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jk.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>jk.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="jr.resx">
+      <DependentUpon>jr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="k2.resx">
+      <DependentUpon>k2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ky.resx">
+      <DependentUpon>ky.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lz.resx">
+      <DependentUpon>lz.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mf.resx">
+      <DependentUpon>mf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My\Resources\Foxtable.Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Foxtable.Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O.2.resx">
+      <DependentUpon>O.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o.resx">
+      <DependentUpon>o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O00_Oooo0oo00.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O00_Oooo0oo00.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O0O__.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O0O__.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o0o。.resx">
+      <DependentUpon>o0o。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O0___o0_.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O0___o0_.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o0　　　　。。.resx">
+      <DependentUpon>o0　　　　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o0。.resx">
+      <DependentUpon>o0。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OO.resx">
+      <DependentUpon>OO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oO0.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>oO0.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oo0O0oO_OOOo.resx">
+      <DependentUpon>oo0O0oO_OOOo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oo0O__.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Oo0O__.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oo0_o0o_0o__.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>oo0_o0o_0o__.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oO0。.resx">
+      <DependentUpon>oO0。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oOo0o0__0.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>oOo0o0__0.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oOOO0oo0_oO_o.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>oOOO0oo0_oO_o.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oOOoo_0_0o_.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>oOOoo_0_0o_.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oOOOO_Oo_.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>oOOOO_Oo_.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OOo_o.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OOo_o.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oOo__OO_.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>oOo__OO_.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OO___O_.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OO___O_.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oo　　0。　o。.resx">
+      <DependentUpon>oo　　0。　o。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oo　　　。.resx">
+      <DependentUpon>oo　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oo　　。　。。.resx">
+      <DependentUpon>Oo　　。　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oo　。_　　　。.resx">
+      <DependentUpon>oo　。_　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oO　。。　O.resx">
+      <DependentUpon>oO　。。　O.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oo。　。　。.resx">
+      <DependentUpon>oo。　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o_.2.resx">
+      <DependentUpon>o_.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O_.3.resx">
+      <DependentUpon>O_.3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O_.resx">
+      <DependentUpon>O_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o_0.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>o_0.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O_O_OO.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O_O_OO.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O_　0_。O。。.resx">
+      <DependentUpon>O_　0_。O。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O_。　。.resx">
+      <DependentUpon>O_。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o_。。　　。.resx">
+      <DependentUpon>o_。。　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　0.resx">
+      <DependentUpon>o　0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　0　　。O.resx">
+      <DependentUpon>o　0　　。O.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　0。.2.resx">
+      <DependentUpon>o　0。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　0。.resx">
+      <DependentUpon>o　0。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　0。。O.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O　0。。O.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　O.resx">
+      <DependentUpon>O　O.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　o　。00。.resx">
+      <DependentUpon>O　o　。00。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　O　。o。　　。。。0.resx">
+      <DependentUpon>o　O　。o。　　。。。0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　O。　。.resx">
+      <DependentUpon>O　O。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　_.resx">
+      <DependentUpon>O　_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　_　。_。.resx">
+      <DependentUpon>o　_　。_。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　_　。。。.resx">
+      <DependentUpon>O　_　。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　o　　　　　oo。。.resx">
+      <DependentUpon>O　　o　　　　　oo。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　　　_。.resx">
+      <DependentUpon>O　　　　_。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　　　　_。。。_。.resx">
+      <DependentUpon>O　　　　　_。。。_。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　　　　　　。　　。　。.resx">
+      <DependentUpon>o　　　　　　。　　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　　　。。　　O。O。.resx">
+      <DependentUpon>O　　　　。。　　O。O。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　　。　　。O　。。.resx">
+      <DependentUpon>O　　　。　　。O　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　　。　。。。。　。.resx">
+      <DependentUpon>O　　　。　。。。。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　　。。。。_　　。.resx">
+      <DependentUpon>O　　　。。。。_　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　　。.resx">
+      <DependentUpon>o　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　。　。。　。.resx">
+      <DependentUpon>O　　。　。。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　。　。。。0.resx">
+      <DependentUpon>O　　。　。。。0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　。。.2.resx">
+      <DependentUpon>O　　。。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　　。。.resx">
+      <DependentUpon>o　　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　　。。0。。　　。　。.resx">
+      <DependentUpon>o　　。。0。。　　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　　。。O.resx">
+      <DependentUpon>o　　。。O.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　　。。。　。。O　。.resx">
+      <DependentUpon>o　　。。。　。。O　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　　。。。。o.resx">
+      <DependentUpon>o　　。。。。o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　　。。。。。　。.resx">
+      <DependentUpon>O　　。。。。。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。.2.resx">
+      <DependentUpon>O　。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。.3.resx">
+      <DependentUpon>O　。.3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。.4.resx">
+      <DependentUpon>o　。.4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。.resx">
+      <DependentUpon>O　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。0.resx">
+      <DependentUpon>o　。0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。O.resx">
+      <DependentUpon>O　。O.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。o　。。。。.resx">
+      <DependentUpon>o　。o　。。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。o。　。_。　　。.resx">
+      <DependentUpon>o　。o。　。_。　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。　o。.resx">
+      <DependentUpon>O　。　o。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。　o。。.resx">
+      <DependentUpon>O　。　o。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。　　。.resx">
+      <DependentUpon>o　。　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。　。.resx">
+      <DependentUpon>o　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。　。　　　。。.resx">
+      <DependentUpon>O　。　。　　　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。　。　。.2.resx">
+      <DependentUpon>O　。　。　。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。　。　。.resx">
+      <DependentUpon>o　。　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。。.2.resx">
+      <DependentUpon>O　。。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。。.resx">
+      <DependentUpon>O　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。。0。　__。.resx">
+      <DependentUpon>O　。。0。　__。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。。O　_。.resx">
+      <DependentUpon>O　。。O　_。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。O。　　　　。.resx">
+      <DependentUpon>o　。。O。　　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。　0.resx">
+      <DependentUpon>o　。。　0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。　　　　　　。.resx">
+      <DependentUpon>o　。。　　　　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。　　。　。　。.resx">
+      <DependentUpon>o　。。　　。　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。　。。　。。。.resx">
+      <DependentUpon>o　。。　。。　。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。。。.resx">
+      <DependentUpon>o　。。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O　。。。。0。。.resx">
+      <DependentUpon>O　。。。。0。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。。。_　　。。。。.resx">
+      <DependentUpon>o　。。。。_　　。。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。。。。O　　　。.resx">
+      <DependentUpon>o　。。。。。O　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。。。。。.resx">
+      <DependentUpon>o　。。。。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o　。。。。。。　　　。.resx">
+      <DependentUpon>o　。。。。。。　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。.2.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O。.2.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。.3.resx">
+      <DependentUpon>o。.3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。.resx">
+      <DependentUpon>O。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。0　　　　　。　。.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O。0　　　　　。　。.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。0　。.resx">
+      <DependentUpon>O。0　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。0。O　。。。.resx">
+      <DependentUpon>O。0。O　。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。0。　。.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>o。0。　。.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。o.resx">
+      <DependentUpon>O。o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。o_。。。　。o.resx">
+      <DependentUpon>O。o_。。。　。o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。o　。　　_。　。。.resx">
+      <DependentUpon>O。o　。　　_。　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。o。。.resx">
+      <DependentUpon>O。o。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。o。。　。0。　。。.resx">
+      <DependentUpon>o。o。。　。0。　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。_.resx">
+      <DependentUpon>o。_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。_　。.resx">
+      <DependentUpon>O。_　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。_　。_。。。O.resx">
+      <DependentUpon>o。_　。_。。。O.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。_。　。.resx">
+      <DependentUpon>O。_。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　0.resx">
+      <DependentUpon>O。　0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　0_。。。。.resx">
+      <DependentUpon>o。　0_。。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　　0。　。.resx">
+      <DependentUpon>o。　　0。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　　_　0　。　。.resx">
+      <DependentUpon>O。　　_　0　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　　　0.resx">
+      <DependentUpon>o。　　　0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　　　O。　。。.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>O。　　　O。　。。.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　　　　。　。.resx">
+      <DependentUpon>O。　　　　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　　　。.resx">
+      <DependentUpon>o。　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　　　。。.resx">
+      <DependentUpon>o。　　　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　　　。。。。。。。.resx">
+      <DependentUpon>O。　　　。。。。。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　　。.resx">
+      <DependentUpon>o。　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　　。　o.resx">
+      <DependentUpon>O。　　。　o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　　。　。.resx">
+      <DependentUpon>O。　　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　　。。。0。.resx">
+      <DependentUpon>o。　　。。。0。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　　。。。　。　0　0.resx">
+      <DependentUpon>O。　　。。。　。　0　0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。.2.resx">
+      <DependentUpon>O。　。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。.3.resx">
+      <DependentUpon>O。　。.3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。.4.resx">
+      <DependentUpon>o。　。.4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。.resx">
+      <DependentUpon>O。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。_.resx">
+      <DependentUpon>o。　。_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。_。　　。　。.resx">
+      <DependentUpon>O。　。_。　　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。　O。　。.resx">
+      <DependentUpon>o。　。　O。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。　　。.resx">
+      <DependentUpon>O。　。　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。　　。_.resx">
+      <DependentUpon>o。　。　　。_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。　　。。。　。。。.resx">
+      <DependentUpon>o。　。　　。。。　。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。　。.resx">
+      <DependentUpon>O。　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。。.2.resx">
+      <DependentUpon>o。　。。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。。.resx">
+      <DependentUpon>O。　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。。O。oo。。。.resx">
+      <DependentUpon>O。　。。O。oo。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。。　　。　。.resx">
+      <DependentUpon>o。　。。　　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。。　。o。o。。.resx">
+      <DependentUpon>O。　。。　。o。o。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。　。。。　　。。.resx">
+      <DependentUpon>o。　。。。　　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。　。。。。。。　。　。.resx">
+      <DependentUpon>O。　。。。。。。　。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。.2.resx">
+      <DependentUpon>O。。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。.3.resx">
+      <DependentUpon>O。。.3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。.4.resx">
+      <DependentUpon>O。。.4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。.5.resx">
+      <DependentUpon>o。。.5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。.6.resx">
+      <DependentUpon>O。。.6.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。.resx">
+      <DependentUpon>o。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。o.resx">
+      <DependentUpon>O。。o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。O　。　　。.resx">
+      <DependentUpon>O。。O　。　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。_。。　O。.resx">
+      <DependentUpon>O。。_。。　O。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。　0O　o　　　。.resx">
+      <DependentUpon>o。。　0O　o　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。　　oo　。.resx">
+      <DependentUpon>O。。　　oo　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。　　　　。　。。。.resx">
+      <DependentUpon>o。。　　　　。　。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。　　　　。。.resx">
+      <DependentUpon>o。。　　　　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。　　　。.resx">
+      <DependentUpon>o。。　　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。　　。.resx">
+      <DependentUpon>o。。　　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。　　。。　。。。.resx">
+      <DependentUpon>O。。　　。。　。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。　。　　。　。。.resx">
+      <DependentUpon>o。。　。　　。　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。　。。　　_.resx">
+      <DependentUpon>O。。　。。　　_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。.resx">
+      <DependentUpon>O。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="o。。。　。.resx">
+      <DependentUpon>o。。。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。　。。。。　0.resx">
+      <DependentUpon>O。。。　。。。。　0.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。。.2.resx">
+      <DependentUpon>O。。。。.2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。。.resx">
+      <DependentUpon>O。。。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。。_o.resx">
+      <DependentUpon>O。。。。_o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。。　o.resx">
+      <DependentUpon>O。。。。　o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。。　　O。。。o.resx">
+      <DependentUpon>O。。。。　　O。。。o.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。。　　。。　　。。.resx">
+      <DependentUpon>O。。。。　　。。　　。。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="O。。。。。　。.resx">
+      <DependentUpon>O。。。。。　。.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureViewer.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PictureViewer.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="My\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
